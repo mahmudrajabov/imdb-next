@@ -1,4 +1,6 @@
-import Results from "./components/Results";
+'use client';
+
+import Results from '../components/Results';
 
 const API_KEY = process.env.API_KEY;
 
@@ -16,7 +18,9 @@ export default async function Home({ searchParams }) {
   }
   const results = data.results;
 
-  return <div>
-    <Results results={results} />
-  </div>;
+  return (
+    <div>
+      <Results results={results} />
+    </div>
+  );
 }
